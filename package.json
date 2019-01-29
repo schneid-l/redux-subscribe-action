@@ -1,0 +1,49 @@
+{
+  "name": "redux-subscribe-action",
+  "version": "2.0.0",
+  "description": "Subscribe to dispatched redux actions",
+  "keywords": [
+    "react",
+    "redux",
+    "redux actions",
+    "redux action",
+    "action",
+    "actions",
+    "subscribe",
+    "subscribe action",
+    "subscribe actions",
+    "redux subscribe action",
+    "redux subscribe actions"
+  ],
+  "main": "./lib/index.js",
+  "scripts": {
+    "clean": "rimraf lib",
+    "lint": "tslint ./src/index.ts",
+    "build": "npm run clean && tsc",
+    "prepublishOnly": "npm run lint && npm run build"
+  },
+  "devDependencies": {
+    "rimraf": "^2.6.3",
+    "tsc": "^1.20150623.0",
+    "tslint": "^5.12.1",
+    "tslint-config-prettier": "^1.17.0",
+    "tslint-config-standard": "^8.0.1",
+    "typescript": "^3.2.4"
+  },
+  "peerDependencies": {
+    "redux": "^3.0.0"
+  },
+  "license": "MIT",
+  "author": "Louis SCHNEIDER <si0lsfr@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/si0ls/redux-subscribe-action/issues"
+  },
+  "homepage": "https://github.com/si0ls/redux-subscribe-action#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/si0ls/redux-subscribe-action.git"
+  },
+  "dependencies": {
+    "redux": "^4.0.1"
+  }
+}
