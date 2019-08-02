@@ -22,13 +22,16 @@
     "build": "npm run clean && tsc",
     "prepublishOnly": "npm run lint && npm run build"
   },
+  "dependencies": {
+    "redux": "^4.0.4"
+  },
   "devDependencies": {
     "rimraf": "^2.6.3",
     "tsc": "^1.20150623.0",
-    "tslint": "^5.12.1",
-    "tslint-config-prettier": "^1.17.0",
+    "tslint": "^5.18.0",
+    "tslint-config-prettier": "^1.18.0",
     "tslint-config-standard": "^8.0.1",
-    "typescript": "^3.2.4"
+    "typescript": "^3.5.3"
   },
   "peerDependencies": {
     "redux": "^3.0.0"
@@ -42,8 +45,5 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/si0ls/redux-subscribe-action.git"
-  },
-  "dependencies": {
-    "redux": "^4.0.1"
   }
 }
