@@ -51,12 +51,12 @@ const _subscribeAction = (
 
 export const subscribeActionBefore = (action: string, listener: Listener) => {
   const actionListenerContainer = { action, listener };
-  _subscribeAction(actionListenerContainer, _actionsSubscribedBefore);
+  return _subscribeAction(actionListenerContainer, _actionsSubscribedBefore);
 };
 
 export const subscribeActionAfter = (action: string, listener: Listener) => {
   const actionListenerContainer = { action, listener };
-  _subscribeAction(actionListenerContainer, _actionsSubscribedAfter);
+  return _subscribeAction(actionListenerContainer, _actionsSubscribedAfter);
 };
 
 const _callListeners = (action: Action, listenerContainer: Listener[]) => {
