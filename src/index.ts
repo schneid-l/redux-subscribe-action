@@ -60,7 +60,8 @@ export const subscribeActionAfter = (action: string, listener: Listener) => {
 };
 
 const _callListeners = (action: Action, listenerContainer: Listener[]) => {
-  for (const listener of listenerContainer) {
+  for (let i = listenerContainer.length - 1; i >= 0; i--) {
+    const listener = listenerContainer[i]
     if (typeof action === 'object') {
       listener(action);
     }
@@ -71,7 +72,8 @@ const _callActionListeners = (
   action: Action,
   listenerContainer: ActionListenerContainer[]
 ) => {
-  for (const listener of listenerContainer) {
+  for (let i = listenerContainer.length - 1; i >= 0; i--) {
+    const listener = listenerContainer[i]
     if (typeof action === 'object' && listener.action === action.type) {
       listener.listener(action);
     }
