@@ -83,7 +83,7 @@ export const unsubscribeAll = () => {
 };
 
 const _unsubscribeAction = (listenerContainer: ActionListenerContainer[], filterAction: string) => {
-  const filteredListenerContainer = listenerContainer.filter(({ action })  => action == filterAction)
+  const filteredListenerContainer = listenerContainer.filter(({ action })  => action !== filterAction)
   listenerContainer.length = 0
   listenerContainer.concat(filteredListenerContainer)
 }
