@@ -9,5 +9,8 @@ export declare const unsubscribeActionsBefore: () => void;
 export declare const unsubscribeAfter: () => void;
 export declare const unsubscribeActionsAfter: () => void;
 export declare const unsubscribeAll: () => void;
+export declare const unsubscribeActionBefore: (action: string) => void;
+export declare const unsubscribeActionAfter: (action: string) => void;
+export declare const unsubscribeActionAll: (action: string) => void;
 export declare const subscribeActionMiddleware: Middleware;
 export default subscribeActionMiddleware;

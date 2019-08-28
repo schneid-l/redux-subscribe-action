@@ -82,6 +82,25 @@ export const unsubscribeAll = () => {
   unsubscribeActionsAfter();
 };
 
+const _unsubscribeAction = (listenerContainer: ActionListenerContainer[], filterAction: string) => {
+  const filteredListenerContainer = listenerContainer.filter(({ action })  => action == filterAction)
+  listenerContainer.length = 0
+  listenerContainer.concat(filteredListenerContainer)
+}
+
+export const unsubscribeActionBefore = (action: string) => {
+  _unsubscribeAction(_actionsSubscribedBefore, action);
+};
+
+export const unsubscribeActionAfter = (action: string) => {
+  _unsubscribeAction(_actionsSubscribedAfter, action);
+};
+
+export const unsubscribeActionAll = (action: string) => {
+  unsubscribeActionBefore(action);
+  unsubscribeActionAfter(action);
+};
+
 const _callListeners = (action: Action, listenerContainer: Listener[]) => {
   for (let i = listenerContainer.length - 1; i >= 0; i--) {
     const listener = listenerContainer[i]
