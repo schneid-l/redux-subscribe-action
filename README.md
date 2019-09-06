@@ -66,7 +66,7 @@ __Example:__
 ```js
 import { subscribeAfter } from 'redux-subscribe-action';
 
-const unsubscribe = subscribeAfter((action) => console.log(`Before state change action ${action.type}`));
+const unsubscribe = subscribeAfter((action) => console.log(`After state change action ${action.type}`));
 
 //...
 
