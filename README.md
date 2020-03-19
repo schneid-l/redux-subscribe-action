@@ -134,6 +134,20 @@ const myListener: Listener = (action: Action) => {
 }
 ```
 
+## unsubscripe methods
+
+The package exposes following unsubscribe methods:
+
+* `unsubscribeBefore()`: unsubscribe all general before listeners
+* `unsubscribeActionsBefore()`: unsubscribe all before action listeners
+* `unsubscribeAfter()`: unsubscribe all general after listeners
+* `unsubscribeActionsAfter()`: unsubscribe all after action listeners
+* `unsubscribeAll()`: unsubscribe from every listener
+
+* `unsubscribeActionBefore(action: string)`: unsubscribe all before listeners corresponding to the passed action
+* `unsubscribeActionAfter(action: string)`: unsubscribe all after listeners corresponding to the passed action
+* `unsubscribeAction(action: string)`: unsubscribe all listeners corresponding to the passed action
+
 # License
 
 [MIT](https://github.com/si0ls/redux-subscribe-action/blob/master/LICENSE)
